@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Subject Selector</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
             margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 10px 0;
         }
 
         #selectedSubject {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
+            margin-top: 20px;
         }
 
         .button-85 {
@@ -24,19 +39,29 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 20px;
         }
 
         .button-85:hover {
             background-color: #0056b3;
         }
 
-        h1, p {
-            margin: 0.5em 0;
+        #demo {
+            font-size: 18px;
+            margin-top: 20px;
         }
 
         @media (max-width: 600px) {
-            #selectedSubject {
+            h1 {
                 font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            #selectedSubject {
+                font-size: 16px;
             }
 
             .button-85 {
@@ -44,18 +69,13 @@
                 font-size: 14px;
             }
 
-            h1 {
-                font-size: 24px;
-            }
-
-            p {
-                font-size: 14px;
+            #demo {
+                font-size: 16px;
             }
         }
     </style>
 </head>
 <body>
-<center>
     <h1>Random Subject Selector</h1>
     <p>Click the button to select a subject randomly:</p>
 
@@ -113,6 +133,5 @@
         }
     }, 1000);
     </script>
-</center>
 </body>
 </html>
