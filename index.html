@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Subject Selector</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #selectedSubject {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .button-85 {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button-85:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>Random Subject Selector</h1><br>
+    <p>Click the button to select a subject randomly:</p>
+    <br><br>
+
+    <button class="button-85" role="button" onclick="selectRandomSubject()">Select Subject</button>
+    <br><br>
+
+    <p id="selectedSubject"></p>
+    <br><br>
+
+    <script>
+        function selectRandomSubject() {
+            const subjects = ["Economics", "Business Studies", "Accounting"];
+            const randomIndex = Math.floor(Math.random() * subjects.length);
+            const selectedSubject = subjects[randomIndex];
+
+            // Generate random RGB color
+            const randomColor = 'rgb(' + Math.floor(Math.random() * 256) + ',' 
+                                      + Math.floor(Math.random() * 256) + ',' 
+                                      + Math.floor(Math.random() * 256) + ')';
+
+            // Apply the color and set the text
+            const subjectElement = document.getElementById("selectedSubject");
+            subjectElement.textContent =  selectedSubject;
+            subjectElement.style.color = randomColor;
+        }
+    </script>
+</center>
+</body>
+</html>
